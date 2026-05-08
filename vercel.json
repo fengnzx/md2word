@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "name": "md2word",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/**"] }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/backend/server.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1",
+      "continue": true
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
