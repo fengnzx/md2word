@@ -14,6 +14,8 @@
 - 🔐 安全的API密钥处理
 - 📱 适用于所有设备的响应式设计
 
+![截图](./screenshot.png)
+
 ## 技术栈
 
 - **前端**: React, TypeScript, Tailwind CSS

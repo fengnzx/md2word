@@ -14,6 +14,8 @@ A web application that converts Markdown files to beautifully formatted Word doc
 - 🔐 Secure API key handling
 - 📱 Responsive design for all devices
 
+![Screenshot](./screenshot.png)
+
 ## Tech Stack
 
 - **Frontend**: React, TypeScript, Tailwind CSS
@@ -81,7 +83,7 @@ PORT=5000
 npm run dev
 ```
 
-4. Visit http://localhost:3000 in your browser to access the application.
+4. Visit http://localhost:5174 in your browser to access the application.
 
 ## Building for Production
 
@@ -99,7 +101,7 @@ npm run build
 
 ## Environment Variables
 
-- `PORT` - Backend server port (default: 5000)
+- `PORT` - Backend server port (default: 5002)
 - `OPENAI_API_KEY` - Your OpenAI API key
 - `OPENAI_API_URL` - OpenAI API endpoint URL
 - `MODEL_NAME` - Model name to use for AI enhancement
