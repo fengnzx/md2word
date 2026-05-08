@@ -50,10 +50,38 @@ To run the application in development mode:
 npm run dev
 ```
 
+Alternatively, you can use the dedicated startup script:
+
+```bash
+node start-dev.js
+```
+
 This will start both the frontend and backend servers concurrently.
 
-Frontend will be available at: http://localhost:3000
-Backend API will be available at: http://localhost:5000
+Frontend will be available at: http://localhost:5174 (Vite will auto-select an available port)
+Backend API will be available at: http://localhost:5002
+
+## Quick Start
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Create a `.env` file in the root directory with your API configuration:
+```env
+OPENAI_API_KEY=your_api_key_here
+OPENAI_API_URL=https://api.openai.com/v1/chat/completions
+MODEL_NAME=gpt-3.5-turbo
+PORT=5000
+```
+
+3. Start the development servers:
+```bash
+npm run dev
+```
+
+4. Visit http://localhost:3000 in your browser to access the application.
 
 ## Building for Production
 

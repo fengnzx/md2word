@@ -38,12 +38,25 @@ cd md2word
 npm install
 ```
 
-3. 启动开发服务器：
+3. 创建 `.env` 文件配置API（可选）：
+```env
+OPENAI_API_KEY=your_api_key_here
+OPENAI_API_URL=https://api.openai.com/v1/chat/completions
+MODEL_NAME=gpt-3.5-turbo
+PORT=5000
+```
+
+4. 启动开发服务器：
 ```bash
 npm run dev
 ```
 
-4. 访问 `http://localhost:5173` 查看应用
+或者使用专门的启动脚本：
+```bash
+node start-dev.js
+```
+
+5. 访问 `http://localhost:3000` 查看应用
 
 ### 生产部署
 
@@ -106,6 +119,12 @@ A: AI功能通过集成的API对文档内容进行分析和优化，提升转换
 
 ### Q: 如何配置AI模型？
 A: 在界面上输入兼容OpenAI的API地址、模型名称和API密钥即可启用AI增强功能。
+
+### Q: API端点是什么？
+A: 后端API运行在 http://localhost:5002，主要端点包括：
+- `GET /api/health` - 服务健康检查
+- `POST /api/conversion/convert` - 转换Markdown文件为Word
+- `GET /api/download/:filename` - 下载转换后的文件
 
 ## 贡献
 

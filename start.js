@@ -40,7 +40,7 @@ installProcess.on('close', (code) => {
     console.log('Starting the application...');
     
     // Start the application
-    const startProcess = spawn('npm', ['run', 'dev'], {
+    const startProcess = spawn('node', ['start-dev.js'], {
       cwd: __dirname,
       stdio: 'inherit'
     });
